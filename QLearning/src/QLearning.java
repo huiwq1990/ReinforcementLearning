@@ -188,28 +188,32 @@ public class QLearning {
         return result;
     }
 
-    void runLearningLoop() throws Exception {
+    void runLearningLoop()   {
         QTable q = new QTable(getActionRange());
         int moveCounter=0;
 
-        while(true){
+        int count =0;
+        while(count <100){
             // PRINT MAP
-            System.out.println("MOVE "+moveCounter);
-            printMap();
+//            System.out.println("MOVE "+moveCounter);
+//            printMap();
             // CHECK IF WON, THEN RESET
             if(isGoalReached()){
                 System.out.println("GOAL REACHED IN "+moveCounter+" MOVES!");
                 resetMaze();
                 moveCounter=0;
-                return;
+                count ++;
+                q.updateQvalue(100, map);
+//                return;
             }
 
             // DETERMINE ACTION
             int action = q.getNextAction(getMap());
-            System.out.println("MOVING: "+getMoveName(action));
+//            System.out.println(action+"MOVING: "+getMoveName(action));
             goToNextState(action);
             moveCounter++;
 
+            q.updateQvalue(-1, map);
             // REWARDS AND ADJUSTMENT OF WEIGHTS SHOULD TAKE PLACE HERE
 
 
@@ -226,10 +230,11 @@ public class QLearning {
      */
     public static void main(String s[]) {
         QLearning app = new QLearning();
-        try{
-            app.runLearningLoop();
-        } catch (Exception e){
-            System.out.println("Thread.sleep interrupted!");
-        }
+        app.runLearningLoop();
+//        try{
+//            app.runLearningLoop();
+//        } catch (Exception e){
+//            System.out.println("Thread.sleep interrupted!");
+//        }
     }
 };
