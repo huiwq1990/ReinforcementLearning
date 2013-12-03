@@ -72,7 +72,7 @@ public class ActionQtable extends Qtable {
 
     prevQs[prevAction] = newQ;
     
-    this.getTable().put(this.prevState, prevQs);
+    this.getTable().put(prevState, prevQs);
   }
   
 
