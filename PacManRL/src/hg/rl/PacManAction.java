@@ -3,29 +3,35 @@ package hg.rl;
 import pacman.game.Constants.MOVE;
 
 public enum PacManAction {
-	
 
-	
+	UP(0,MOVE.UP),
+	RIGHT(1,MOVE.RIGHT),
+	DOWN(2,MOVE.DOWN),	
+	LEFT(3,MOVE.LEFT),
+	NEUTRAL(4,MOVE.NEUTRAL);	
+
 	  // Update the total number when adding new actions.
-	  public static final int TOTAL_ACTIONS = 12;
-	  
+	  public static final int TOTAL_ACTIONS = 5;
 	  private final int actionNumber;
-	  private final boolean[] action;
-	  
-	UP(0),	
-//	RIGHT(1,MOVE),
-//	DOWN(0,MOVE.UP),	
-//	LEFT(0,MOVE.UP),	
-//	NEUTRAL(0,MOVE.UP),	
+	  private final MOVE action;
+	  private PacManAction(int actionNumber,MOVE move ) {
+		 this.actionNumber = actionNumber;
+		 this.action = move;
+	  }
+	public int getActionNumber() {
+		return actionNumber;
+	}
 	
-	 
-	//这种声明方式，表示可以多种方式传参，可以为空，可以传一个，可以传多个
-//	PacManAction(int actionNumber,MOVE... move) {
-//		  
-//	
-//	}
-	PacManAction(int actionNumber) {
-		  
-		
-	}	 
+	
+	 public MOVE getAction() {
+		return action;
+	}
+	public static MOVE getAction(int actionNumber) {
+		    return PacManAction.values()[actionNumber].getAction();
+		  }
+	  
+	 public static void main(String[] args) {
+
+		  System.out.println(PacManAction.getAction(2));
+	  }
 }
