@@ -110,9 +110,21 @@ import java.util.Random;
          * @param the current map (state)
          * @return the action with the highest Q value
          */
-        int getBestAction(char[] map){
-            return 0;
-        }
+	int getBestAction(char[] map) {
+
+		float[] rewards = this.getActionsQValues(map);
+
+		float maxRewards = Float.NEGATIVE_INFINITY;
+		int indexMaxRewards = 0;
+
+		for (int i = 0; i < rewards.length; i++) {
+			if (maxRewards < rewards[i]) {
+				maxRewards = rewards[i];
+				indexMaxRewards = i;
+			}
+		}
+		return indexMaxRewards;
+	}
 
         /**
          * The explore function is called for e-greedy algorithms.
@@ -123,7 +135,7 @@ import java.util.Random;
          * @return index of action to take
          */
         int explore(){
-			return 0;
+			return new Random().nextInt(4);
         }
 
         /**
@@ -139,6 +151,12 @@ import java.util.Random;
          * current map state)
          */
         void updateQvalue(int reward, char[] map){
+        	
+        	float[] preVal = this.getActionsQValues(this.prevState);
+        	
+        	preVal[this.prevAction] += this.learningRate * (reward + this.gammaValue * ( this.getActionsQValues(map)[this.getBestAction(map)]  - preVal[this.prevAction] ));
+        	
+        	 table.put(getMapString(this.prevState), preVal);
 
         }
 

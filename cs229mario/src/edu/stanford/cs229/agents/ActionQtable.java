@@ -71,8 +71,11 @@ public class ActionQtable extends Qtable {
     float newQ = (1 - alpha) * prevQ +  alpha * (reward + gammaValue * maxQ);
 
     prevQs[prevAction] = newQ;
+    
+    this.getTable().put(prevState, prevQs);
   }
   
+
   @Override
   float[] getInitialQvalues(long stateNumber) {
     float[] initialQvalues = new float[actionRange];
