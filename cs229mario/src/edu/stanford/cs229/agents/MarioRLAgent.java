@@ -137,6 +137,7 @@ public class MarioRLAgent implements LearningAgent {
     Logger.println(0, "Trial: %d", learningTrial);
 
     init();
+   System.out.println( ((MarioRLAgent)learningTask.getAgent()).learningTrial);
     learningTask.runSingleEpisode(1);
 
     EvaluationInfo evaluationInfo =
