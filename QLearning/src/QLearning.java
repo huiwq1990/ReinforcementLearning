@@ -195,7 +195,6 @@ public class QLearning {
         int count =0;
         while(count <100){
             // PRINT MAP
-//            System.out.println("MOVE "+moveCounter);
 //            printMap();
             // CHECK IF WON, THEN RESET
             if(isGoalReached()){
@@ -203,7 +202,7 @@ public class QLearning {
                 resetMaze();
                 moveCounter=0;
                 count ++;
-                q.updateQvalue(100, map);
+//                q.updateQvalue(100, map);
 //                return;
             }
 
@@ -213,9 +212,14 @@ public class QLearning {
             goToNextState(action);
             moveCounter++;
 
-            q.updateQvalue(-1, map);
+           
             // REWARDS AND ADJUSTMENT OF WEIGHTS SHOULD TAKE PLACE HERE
-
+            if(isGoalReached()){
+            	q.updateQvalue(1, map);
+            }else{
+            	q.updateQvalue(-100, map);
+            }
+            
 
             // COMMENT THE SLEEP FUNCTION IF YOU NEED FAST TRAINING WITHOUT
             // NEEDING TO ACTUALLY SEE IT PROGRESS
@@ -230,11 +234,10 @@ public class QLearning {
      */
     public static void main(String s[]) {
         QLearning app = new QLearning();
-        app.runLearningLoop();
-//        try{
-//            app.runLearningLoop();
-//        } catch (Exception e){
-//            System.out.println("Thread.sleep interrupted!");
-//        }
+        try{
+            app.runLearningLoop();
+        } catch (Exception e){
+            System.out.println("Thread.sleep interrupted!");
+        }
     }
 };

@@ -37,7 +37,7 @@ import java.util.Random;
          * because it is customary that the exploration chance changes as the
          * training goes on.
          */
-        float explorationChance=0.4f;
+        float explorationChance=0.05f;
         /**
          * the discount factor is saved as the gammaValue variable. The
          * discount factor determines the importance of future rewards.
@@ -122,7 +122,8 @@ import java.util.Random;
 				maxRewards = rewards[i];
 				indexMaxRewards = i;
 			}
-		}
+		} 
+//		this.prevAction = indexMaxRewards;
 		return indexMaxRewards;
 	}
 
@@ -152,11 +153,10 @@ import java.util.Random;
          */
         void updateQvalue(int reward, char[] map){
         	
-        	float[] preVal = this.getActionsQValues(this.prevState);
+        	float[] preVal = this.getActionsQValues(this.prevState);        	
+        	preVal[this.prevAction] += this.learningRate * (reward + this.gammaValue *  this.getActionsQValues(map)[this.getBestAction(map)]  - preVal[this.prevAction] );
         	
-        	preVal[this.prevAction] += this.learningRate * (reward + this.gammaValue * ( this.getActionsQValues(map)[this.getBestAction(map)]  - preVal[this.prevAction] ));
-        	
-        	 table.put(getMapString(this.prevState), preVal);
+//        	 table.put(getMapString(this.prevState), preVal);
 
         }
 
