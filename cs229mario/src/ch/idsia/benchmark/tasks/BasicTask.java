@@ -162,6 +162,7 @@ public String getName()
     return name;
 }
 
+
 public void printStatistics()
 {
     System.out.println(evaluationInfo.toString());
@@ -172,6 +173,17 @@ public EvaluationInfo getEvaluationInfo()
 //    System.out.println("evaluationInfo = " + evaluationInfo);
     return evaluationInfo;
 }
+
+public Agent getAgent() {
+	return agent;
+}
+
+public void setAgent(Agent agent) {
+	this.agent = agent;
+}
+
+
+
 
 }
 
