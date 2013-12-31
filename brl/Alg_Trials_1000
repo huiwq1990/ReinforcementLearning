@@ -1,0 +1,141 @@
+QLearning
+
+    SlipperyChain
+
+    Phase 1: 1565.34375
+    Phase 2: 1580.5234375
+    Phase 3: 1583.296875
+    Phase 4: 1594.6328125
+    Phase 5: 1601.796875
+    Phase 6: 1604.78125
+    Phase 7: 1606.015625
+    Phase 8: 1610.4609375
+
+    Loop
+
+    Phase 1: 246.82421875
+    Phase 2: 312.05859375
+    Phase 3: 335.95703125
+    Phase 4: 344.17578125
+    Phase 5: 352.77734375
+    Phase 6: 356.92578125
+    Phase 7: 359.79296875
+    Phase 8: 363.18359375
+
+    LoopDeadEnd
+
+    Phase 1: 162.0703125
+    Phase 2: 208.5390625
+    Phase 3: 223.91796875
+    Phase 4: 231.93359375
+    Phase 5: 228.02734375
+    Phase 6: 233.5859375
+    Phase 7: 234.2578125
+    Phase 8: 235.05859375
+
+    LoopDiffTrans
+    
+    Phase 1: 229.70703125
+    Phase 2: 268.94921875
+    Phase 3: 290.5859375
+    Phase 4: 306.01171875
+    Phase 5: 313.3203125
+    Phase 6: 316.16015625
+    Phase 7: 322.02734375
+    Phase 8: 329.81640625
+
+PrioritizedSweepingHeuristics
+
+    SlipperyChain
+    
+    Phase 1: 2828.6171875
+    Phase 2: 3413.203125
+    Phase 3: 3536.296875
+    Phase 4: 3549.765625
+    Phase 5: 3595.8828125
+    Phase 6: 3588.203125
+    Phase 7: 3586.203125
+    Phase 8: 3631.90625
+
+    Loop
+    
+    Phase 1: 295.00390625
+    Phase 2: 343.328125
+    Phase 3: 355.08203125
+    Phase 4: 361.53515625
+    Phase 5: 368.73046875
+    Phase 6: 371.76953125
+    Phase 7: 373.2890625
+    Phase 8: 375.203125
+
+    LoopDeadEnd
+    
+    Phase 1: 55.71484375
+    Phase 2: 175.16796875
+    Phase 3: 181.2421875
+    Phase 4: 182.3828125
+    Phase 5: 184.62109375
+    Phase 6: 184.9375
+    Phase 7: 186.1953125
+    Phase 8: 187.34375
+
+    LoopDiffTrans
+    
+    Phase 1: 238.40234375
+    Phase 2: 266.1796875
+    Phase 3: 270.8984375
+    Phase 4: 276.03515625
+    Phase 5: 281.9609375
+    Phase 6: 277.1875
+    Phase 7: 279.65234375
+    Phase 8: 285.0234375
+
+BayesDP
+
+    SlipperyChain
+    
+    Phase 1: 2386.203125
+    Phase 2: 2901.9140625
+    Phase 3: 3074.9453125
+    Phase 4: 3192.2265625
+    Phase 5: 3274.7578125
+    Phase 6: 3312.328125
+    Phase 7: 3387.8203125
+    Phase 8: 3403.34375
+    
+    Loop
+    
+    Phase 1: 287.078125
+    Phase 2: 334.46484375
+    Phase 3: 337.23046875
+    Phase 4: 339.24609375
+    Phase 5: 340.37890625
+    Phase 6: 339.1171875
+    Phase 7: 339.62109375
+    Phase 8: 340.02734375
+
+    LoopDeadEnd
+    
+    Phase 1: 179.796875
+    Phase 2: 393.6328125
+    Phase 3: 474.8125
+    Phase 4: 490.40625
+    Phase 5: 492.234375
+    Phase 6: 493.3984375
+    Phase 7: 493.2578125
+    Phase 8: 493.953125
+    
+    LoopDiffTrans
+    
+    Phase 1: 209.5703125
+    Phase 2: 264.74609375
+    Phase 3: 286.09765625
+    Phase 4: 286.24609375
+    Phase 5: 289.12109375
+    Phase 6: 297.26953125
+    Phase 7: 290.91796875
+    Phase 8: 300.625
+    
+
+
+

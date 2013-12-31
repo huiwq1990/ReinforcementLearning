@@ -1,0 +1,78 @@
+QLearning
+
+    SlipperyChain
+    
+    Phase 1: 469.671875
+    Phase 2: 470.9375
+    Phase 3: 472.40625
+
+    Loop
+    
+    Phase 1: 59.390625
+    Phase 2: 73.25
+    Phase 3: 78.84765625
+    
+    LoopDeadEnd
+    
+    Phase 1: 41.64453125
+    Phase 2: 59.3203125
+    Phase 3: 67.875
+    
+    LoopDiffTrans
+    
+    Phase 1: 56.87109375
+    Phase 2: 66.96484375
+    Phase 3: 71.1796875
+    
+PrioritizedSweepingHeuristics
+
+    SlipperyChain
+    
+    Phase 1: 626.7734375
+    Phase 2: 841.4921875
+    Phase 3: 958.3046875
+    
+    Loop
+    
+    Phase 1: 72.21875
+    Phase 2: 92.0234375
+    Phase 3: 98.05078125
+
+    LoopDeadEnd
+    
+    Phase 1: 24.91796875
+    Phase 2: 52.18359375
+    Phase 3: 54.24609375
+
+    LoopDiffTrans
+    
+    Phase 1: 63.33203125
+    Phase 2: 70.10546875
+    Phase 3: 74.19140625
+    
+BayesDP
+
+    SlipperyChain
+    
+    Phase 1: 598.0234375
+    Phase 2: 783.84375
+    Phase 3: 855.1015625
+    
+    Loop
+    
+    Phase 1: 77.3828125
+    Phase 2: 95.12890625
+    Phase 3: 99.4921875
+    
+    LoopDeadEnd
+    
+    Phase 1: 55.7109375
+    Phase 2: 106.97265625
+    Phase 3: 125.921875
+    
+    LoopDiffTrans
+    
+    Phase 1: 50.37890625
+    Phase 2: 69.078125
+    Phase 3: 78.65625
+    
