@@ -11,11 +11,14 @@ public class CarState {
 	private double changeSpeed = 0;
 	private double lastSpeed = 0 ;
 	 
+	
+	private SensorModel sensors;
 	/**
 	   * Updates the state with the given Environment.
 	   */
 	  
 	public void update(SensorModel sensors) {
+		this.sensors = sensors;
 		changeDistanceFromStartLine = sensors.getDistanceFromStartLine() - lastDistanceFromStartLine;
 		lastDistanceFromStartLine = sensors.getDistanceFromStartLine();
 		
@@ -28,12 +31,22 @@ public class CarState {
 	}
 	
 	public float calculateReward() {
+		float re = 0;
+		 re += this.changeSpeed;
+//		 re += this.changeAngleToTrackAxis;
+		 re += this.changeDistanceFromStartLine;
+		 
+		 re += (-sensors.getTrackPosition());
+		 
 		
+		return re;
 	}
 
 	public long getStateNumber() {
 		// TODO Auto-generated method stub
-		return 0;
+		
+		int num = (int) (sensors.getAngleToTrackAxis()*10);
+		return num;
 	}
 	  
 

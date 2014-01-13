@@ -4,6 +4,8 @@ public class CarAction {
 	  // Update the total number when adding new actions.
 	  public static final int TOTAL_ACTIONS = 12;
 	  
+	  public st
+	  
 //	  private final int actionNumber;
 //	  private final boolean[] action;
 	
