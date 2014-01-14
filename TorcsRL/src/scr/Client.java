@@ -131,7 +131,7 @@ public class Client {
 		clientId = "SCR";
 		verbose = false;
 		maxEpisodes = 1;
-		maxSteps = 0;
+		maxSteps = 20000;
 		stage = Stage.UNKNOWN;
 		trackName = "unknown";
 		

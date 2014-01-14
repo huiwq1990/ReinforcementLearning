@@ -1,8 +1,4 @@
 
-
-import java.util.ArrayList;
-import java.util.List;
-
 import scr.Action;
 import scr.Controller;
 import scr.SensorModel;
@@ -30,14 +26,16 @@ public class RLController extends Controller {
 	
 	@Override
 	public Action control(SensorModel sensors) {
+		
+//		System.out.println(sensors.getAngleToTrackAxis());
 		 currentState.update(sensors);
 		 actionTable.updateQvalue(
 		          currentState.calculateReward(), currentState.getStateNumber());
 		  // Transforms the best action number to action array.
 	    int actionNumber = actionTable.getNextAction(currentState.getStateNumber());
-	    
+	    System.out.println(currentState.calculateReward()+"  "+ currentState.getStateNumber()+"  " + sensors.getTrackPosition() +" " + sensors.getAngleToTrackAxis());
 	    Logger.println(2, "Next action: " + actionNumber + "\n");
-	    return new Action();
+	    return CarAction.getAction(actionNumber);
 //	    return CarAction.getAction(actionNumber);
 	}
 	
